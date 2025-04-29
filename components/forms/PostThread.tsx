@@ -17,7 +17,6 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { Textarea } from '../ui/textarea'
-// import { Textarea } from '../ui/textarea'
 
 interface Props {
 	user: {
