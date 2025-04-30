@@ -1,7 +1,15 @@
+'use client'
+
 import { OrganizationSwitcher, SignedIn, SignOutButton } from '@clerk/nextjs'
-import { dark } from '@clerk/themes'
+import { dark } from '@clerk/themes/dist/themes/src'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import dynamic from 'next/dynamic'
+const OrganizationSwitcherNoSSR = dynamic(
+	() => import('@clerk/nextjs').then(mod => mod.OrganizationSwitcher),
+	{ ssr: false }
+)
 
 function TopBar() {
 	return (
@@ -30,7 +38,7 @@ function TopBar() {
 					appearance={{
 						baseTheme: dark,
 						elements: {
-							OrganizationSwitcherTrigger: 'py-2 px-4',
+							Trigger: 'py-2 px-4',
 						},
 					}}
 				/>

@@ -53,7 +53,7 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
 				<FormField
 					control={form.control}
 					name='thread'
-					render={({ field }) => (
+					render={({ field }: any) => (
 						<FormItem className='flex items-center gap-3 w-full'>
 							<FormLabel>
 								<Image
