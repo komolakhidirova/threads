@@ -35,6 +35,8 @@ type Event = {
 }
 
 export const POST = async (request: Request) => {
+	console.log('POST is here')
+
 	const payload = await request.json()
 	const header = headers()
 
